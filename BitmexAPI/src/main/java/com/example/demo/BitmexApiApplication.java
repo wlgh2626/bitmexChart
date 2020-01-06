@@ -23,7 +23,7 @@ public class BitmexApiApplication {
 	// https://www.bitmex.com/api/v1/trade?startTime=2017-11-06 
 	// https://www.bitmex.com/api/v1/trade/bucketed?startTime=2017-11-06&binSize=1d 
 	// gets total of 100 trades from 2017-11-06
-	private static final Logger log = LoggerFactory.getLogger(BitmexApiApplication.class);
+	//private static final Logger log = LoggerFactory.getLogger(BitmexApiApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(BitmexApiApplication.class, args);
@@ -34,9 +34,11 @@ public class BitmexApiApplication {
 		return builder.build();
 	}
 
+	/*
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 	
+		
 			UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(targetTradeWebsite)
 					.queryParam("startTime", "2017-11-06")
 					.queryParam("binSize", "1d");
@@ -57,4 +59,5 @@ public class BitmexApiApplication {
 			
 			return null;
 	}
+	*/
 }
