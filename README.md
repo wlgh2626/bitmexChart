@@ -1,2 +1,2 @@
 # bitmexChart
-Bitmex chart in Java
+Creating Bitmex Bitcoin Chart using Spring Boot 
