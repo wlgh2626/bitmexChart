@@ -1,9 +1,9 @@
 package com.example.demo;
 
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +19,9 @@ public class BitmexApiApplication {
 
 	String targetTestWebsite = "https://www.bitmex.com/api/v1";	
 	String targetTradeWebsite = "https://www.bitmex.com/api/v1/trade/bucketed";	 
-	
+	private static final Logger log = LoggerFactory.getLogger(BitmexApiApplication.class);
+
+	//localhost:8080
 	// https://www.bitmex.com/api/v1/trade?startTime=2017-11-06 
 	// https://www.bitmex.com/api/v1/trade/bucketed?startTime=2017-11-06&binSize=1d 
 	// gets total of 100 trades from 2017-11-06
@@ -34,14 +36,16 @@ public class BitmexApiApplication {
 		return builder.build();
 	}
 
-	/*
+	//uri should change based on input. This can be done using a controller
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-	
+			
 		
 			UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(targetTradeWebsite)
 					.queryParam("startTime", "2017-11-06")
 					.queryParam("binSize", "1d");
+			// https://www.bitmex.com/api/v1/trade/bucketed?startTime=2017-11-06&binSize=1d 
+			
 			String paramWebsite = uriBuilder.toUriString();
 			testData testData = restTemplate.getForObject( targetTestWebsite , testData.class);
 			
@@ -53,11 +57,11 @@ public class BitmexApiApplication {
 			
 			int j =  tradeData.length;
 			for(int i = 0; i < j ; i++) {
-				log.info(tradeData[i].getTimestamp());
+				log.info(tradeData[i].getTimestamp());	//prints in console log
 			}
 			
 			
 			return null;
 	}
-	*/
+	
 }
