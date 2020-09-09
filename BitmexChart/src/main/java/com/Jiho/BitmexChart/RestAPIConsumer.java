@@ -20,9 +20,10 @@ public class RestAPIConsumer {
 	}
 	
 	@GetMapping("/xbtusd")
-	List<Object> xbtusd(QueryParam param){	//will be called by home controller, where we input values on the 
+	List<Object> xbtusd(QueryParam param){	//will be called by home controller, (PERPETUAL CONTRACT)
 		
 		Object[] obj = template.getForObject( "https://www.bitmex.com/api/v1/trade/bucketed?startTime=2017-11-06&binSize=1d" , Object[].class);
 		return Arrays.asList(obj);
 	}
+	
 }
