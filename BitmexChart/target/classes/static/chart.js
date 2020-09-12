@@ -19,3 +19,4 @@ function helloworld() {
         { time: '2019-04-20', value: 74.43 },
     ]);
 }
+helloworld();

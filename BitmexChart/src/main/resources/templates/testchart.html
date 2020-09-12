@@ -5,19 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-   
-    
+  
 </head>
-<body>
+<body onload="helloworld()">
    
-    <input type="button" onclick="letMeCallYou()" value="test">
+    <!-- input type="button" onclick="letMeCallYou()" value="test" -->
     
     <h2>Bitmex Chart</h2>
-    <input type="button" onclick="helloworld()" value="Show Chart">
-
-
-    <script type="text/javascript" th:src="@{chart.js}"></script>    
-   
+    <script type="text/javascript" th:src="@{chart.js}"></script> 
+    
 </body>
 	
 </html>

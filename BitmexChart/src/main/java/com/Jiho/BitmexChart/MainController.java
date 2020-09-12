@@ -10,14 +10,14 @@ public class MainController {
 
 		@RequestMapping("home")
 		static String home() {
-			return "home.jsp";
+			return "home.html";
 		}
 		
 		@RequestMapping("mvtest")
 		static ModelAndView mvtest(QueryParam param) {
 			ModelAndView mv = new ModelAndView();
 			mv.addObject("param" , param);
-			mv.setViewName("mvtest.jsp");
+			mv.setViewName("mvtest.html");
 			return mv;
 		}
 		
