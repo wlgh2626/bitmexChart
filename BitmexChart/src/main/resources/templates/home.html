@@ -10,20 +10,34 @@
 </head>
 <body>
 	<form action="#">
-	  <select name="item">
+	  <select id="symbol" name="item" onchange="setSymbol()">
 	    <option value="XBT:perpetual">XBT/USD</option>
 	  </select>
-	  <input type="submit" value="Submit">
 	</form>
 	
 	<form action="#">
-	  <select name="item">
-	  	<option value="XBT:perpetual">4H</option>
-	    <option value="XBT:perpetual">1D</option>
+	  <select id="time" name="item" onchange="setTime()">
+	  	<option value="1H">1H</option>
+	  	<option value="4H">4H</option>
+	    <option value="1D">1D</option>
 	  </select>
-	  <input type="submit" value="Submit">
+	  
 	</form>
-	
+	<input type="submit" value="Submit">
+	<script>
+		var Parameter {
+			time : "1H",
+			symbol: "XBT/USD",
+		}
+		
+		function setSymbol() {
+			Parameter.symbol = document.getElementById("symbol");
+		}
+		
+		function setTime() {
+			Parameter.time = document.getElementById("time");
+		}
+	</script>
 </body>
-	<script src="chart2.js"></script>
+	
 </html>

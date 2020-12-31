@@ -1,4 +1,0 @@
-function letMeCallYou()
-{
-    alert("HELLO")
-}

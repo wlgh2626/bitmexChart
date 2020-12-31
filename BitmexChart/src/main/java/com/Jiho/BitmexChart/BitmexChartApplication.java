@@ -6,6 +6,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import com.Jiho.BitmexChart.query.QueryParam;
+
 @SpringBootApplication
 public class BitmexChartApplication {
 
@@ -13,12 +15,12 @@ public class BitmexChartApplication {
 	public RestTemplate getTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}
-	
+	/*
 	@Bean
 	public QueryParam getQueryParam() {
 		return new QueryParam();
 	}
-	
+	*/
 	public static void main(String[] args) {
 		SpringApplication.run(BitmexChartApplication.class, args);
 	}
